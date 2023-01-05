@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body { 
+    font-family: 'Zen Dots', sans-serif;
+    background-image: linear-gradient(to bottom, #ffe800, #ffae20, #ff6b61, #ff30a1, #e540de);
+    background-repeat: no-repeat;
+    height: 100vh;
+    color: #000000;
+    margin-top: 3%;
+}
+
+h1{
+    vertical-align: bottom;
+    justify-self: center;
+    text-align: center;
+}
+
+#joueur1{
+    color: blue;
+    font-size: 20px;
+}
+
+#joueur2{
+    color: red;
+    font-size: 20px;
+}
+
+#register{
+    margin: auto;
+    text-align: center;
+    display: grid;
+    width: 540px;
+    grid-template-columns: 120px 120px;
+    align-items: center;
+    justify-content:space-between;
+}
+
+.inputText{
+    background: black;
+    text-align:  center;
+    border: solid 1px #000000;
+    width: 100px;
+    height: 30px;
+    color: white;
+    border-radius: 20px;
+    font-size: 15px;
+}
+
+::placeholder { 
+    color: gray;
+    font-size: 15px;
+}
+
+#playGame{
+    margin:50%;
+    width: 100px;
+    height: 50px;
+    background: black;
+    border-radius: 20px;
+    font-size: 20px;
+    color: greenyellow;
+    transition: 1s;
+}
+
+#playGame:hover{
+    color: black;
+    background: greenyellow;
+    animation: pulse-black 1s infinite;
+}
+
+#gameStatus {
+    display: block;
+    text-align: center;
+    margin-top: 5%;
+    animation: textPulse 2s infinite;
+    font-size:25px ;
+    color: black;
+}
+
+.cell {
+    height: 100px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 45px;
+    cursor: pointer;
+    border-radius: 20px;
+    margin: 5px;
+    color: white;
+    background: none;
+    border: 3px solid black;
+}
+
+.cell:hover{
+    animation: pulse-black 1s infinite;
+    background: black;
+    transition: 3s;
+}
+
+.board {
+    width: 350px;
+    display: none;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+#gameEnd {
+    position: fixed;
+    display: none;
+    align-items:center;
+    justify-self:center;
+    top: 0; right: 0; bottom: 0; left: 0;
+    background-image: linear-gradient(to top, #ffe800, #ffae20, #ff6b61, #ff30a1, #e540de);
+    color: #000000;
+    text-align: center;
+    font-size: 40px;
+
+}
+
+#gameEnd input{
+    width: 150px;
+    height: 70px;
+    background: black;
+    border-radius: 20px;
+    font-size: 20px;
+    animation: textPulse 2s infinite;
+    color: greenyellow;
+    justify-self : center;
+    transition: 1s;
+}
+
+#gameEnd input:hover{
+    color: black;
+    background: greenyellow;
+    animation: pulse-black 1s infinite;
+}
+
+@keyframes pulse-black {
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 black;
+        border-radius: 40px;
+    }
+
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 3px black;
+        border-radius: 20px;
+    }
+
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 black;
+        border-radius: 40px;
+    }
+}
+
+@keyframes textPulse {
+    0% {
+        transform: scale(0.95);
+    }
+
+    70% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(0.95);
+    }
+}
